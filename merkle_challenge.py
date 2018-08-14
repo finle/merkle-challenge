@@ -58,8 +58,7 @@ def get_logfill_events(block_number):
     raw_events = get_raw_logfill_events(block_number)
     return decode_raw_events(raw_events)
 
-
-if __name__ == "__main__":
+def main():
     if len(sys.argv) < 2:
         sys.exit('Please provide a single argument for block number.')
     try:
@@ -70,3 +69,7 @@ if __name__ == "__main__":
     decoded_events = get_logfill_events(block_number)
     for event in decoded_events:
         pp.pprint(event)
+
+
+if __name__ == "__main__":
+    main()
