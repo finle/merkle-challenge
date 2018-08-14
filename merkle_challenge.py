@@ -58,6 +58,7 @@ def get_logfill_events(block_number):
     raw_events = get_raw_logfill_events(block_number)
     return decode_raw_events(raw_events)
 
+
 def main():
     if len(sys.argv) < 2:
         sys.exit('Please provide a single argument for block number.')
